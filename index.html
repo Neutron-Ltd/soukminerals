@@ -117,6 +117,19 @@
             100% { transform: rotate(360deg); }
         }
 
+        /* FAQ Accordion */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-item.active .accordion-content {
+            max-height: 200px;
+        }
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+
         /* Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
@@ -159,6 +172,7 @@
             <!-- Desktop Menu -->
             <div class="hidden md:flex items-center gap-8">
                 <a href="#about" class="text-sm uppercase tracking-widest hover:text-gold-400 transition-colors">About</a>
+                <a href="#process" class="text-sm uppercase tracking-widest hover:text-gold-400 transition-colors">Process</a>
                 <a href="#services" class="text-sm uppercase tracking-widest hover:text-gold-400 transition-colors">Services</a>
                 <a href="#minerals" class="text-sm uppercase tracking-widest hover:text-gold-400 transition-colors">Minerals</a>
                 <a href="#contact" class="px-6 py-2 border border-gold-500 text-gold-400 hover:bg-gold-500 hover:text-black transition-all duration-300 uppercase text-xs tracking-widest font-bold">
@@ -176,6 +190,7 @@
         <div id="mobile-menu" class="fixed inset-0 bg-black/95 transform translate-x-full transition-transform duration-300 flex flex-col items-center justify-center gap-8 md:hidden h-screen z-50">
             <button id="close-menu" class="absolute top-8 right-8 text-gold-400 text-2xl"><i class="fas fa-times"></i></button>
             <a href="#about" class="text-2xl font-serif text-white hover:text-gold-400">About Us</a>
+            <a href="#process" class="text-2xl font-serif text-white hover:text-gold-400">Our Process</a>
             <a href="#services" class="text-2xl font-serif text-white hover:text-gold-400">Services</a>
             <a href="#minerals" class="text-2xl font-serif text-white hover:text-gold-400">Minerals</a>
             <a href="#contact" class="text-2xl font-serif text-gold-500">Contact</a>
@@ -218,7 +233,7 @@
     </header>
 
     <!-- Mission & Vision Section (Geometric Layout) -->
-    <section class="relative py-24 bg-charcoal overflow-hidden">
+    <section id="about" class="relative py-24 bg-charcoal overflow-hidden">
         <!-- Geometric Decoration -->
         <div class="absolute top-0 right-0 w-96 h-96 border border-gold-500/10 rotate-45 translate-x-1/2 -translate-y-1/2"></div>
         <div class="absolute bottom-0 left-0 w-64 h-64 border border-gold-500/10 rotate-12 -translate-x-1/2 translate-y-1/4"></div>
@@ -253,6 +268,71 @@
                             <i class="fas fa-eye absolute -right-4 -bottom-4 text-8xl text-white/5 opacity-10"></i>
                             <h3 class="text-gold-400 font-serif text-2xl mb-3">Our Vision</h3>
                             <p class="text-sm text-gray-300">To be the leading and most trusted partner in Uganda’s mineral sector, setting new benchmarks for quality, integrity, and sustainability across Africa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Process Timeline -->
+    <section id="process" class="py-24 bg-onyx relative">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-20">
+                <span class="text-gold-400 uppercase tracking-[0.2em] text-sm">Our Workflow</span>
+                <h2 class="font-serif text-4xl text-white mt-4">From Ground to Globe</h2>
+            </div>
+
+            <div class="relative">
+                <!-- Center Line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-[1px] h-full bg-gradient-to-b from-transparent via-gold-500/50 to-transparent hidden md:block"></div>
+
+                <div class="space-y-16">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-8 group">
+                        <div class="w-full md:w-5/12 text-center md:text-right order-2 md:order-1">
+                            <h3 class="font-serif text-2xl text-white mb-2">01. Exploration & Survey</h3>
+                            <p class="text-gray-400 font-light text-sm">Identifying mineral-rich zones in Karamoja and Busia using advanced geological surveying.</p>
+                        </div>
+                        <div class="w-12 h-12 bg-charcoal border border-gold-500 rounded-full flex items-center justify-center z-10 order-1 md:order-2 group-hover:bg-gold-500 group-hover:text-black transition-colors duration-300">
+                            <i class="fas fa-search-location text-gold-400 group-hover:text-black"></i>
+                        </div>
+                        <div class="w-full md:w-5/12 order-3"></div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-8 group">
+                        <div class="w-full md:w-5/12 order-3 md:order-1"></div>
+                        <div class="w-12 h-12 bg-charcoal border border-gold-500 rounded-full flex items-center justify-center z-10 order-1 md:order-2 group-hover:bg-gold-500 group-hover:text-black transition-colors duration-300">
+                            <i class="fas fa-hammer text-gold-400 group-hover:text-black"></i>
+                        </div>
+                        <div class="w-full md:w-5/12 text-center md:text-left order-2 md:order-3">
+                            <h3 class="font-serif text-2xl text-white mb-2">02. Ethical Extraction</h3>
+                            <p class="text-gray-400 font-light text-sm">Artisanal and mechanized mining prioritizing safety and environmental minimization.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-8 group">
+                        <div class="w-full md:w-5/12 text-center md:text-right order-2 md:order-1">
+                            <h3 class="font-serif text-2xl text-white mb-2">03. Quality Testing</h3>
+                            <p class="text-gray-400 font-light text-sm">Rigorous assaying and purification processes to ensure high-grade purity standards.</p>
+                        </div>
+                        <div class="w-12 h-12 bg-charcoal border border-gold-500 rounded-full flex items-center justify-center z-10 order-1 md:order-2 group-hover:bg-gold-500 group-hover:text-black transition-colors duration-300">
+                            <i class="fas fa-vial text-gold-400 group-hover:text-black"></i>
+                        </div>
+                        <div class="w-full md:w-5/12 order-3"></div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-8 group">
+                        <div class="w-full md:w-5/12 order-3 md:order-1"></div>
+                        <div class="w-12 h-12 bg-charcoal border border-gold-500 rounded-full flex items-center justify-center z-10 order-1 md:order-2 group-hover:bg-gold-500 group-hover:text-black transition-colors duration-300">
+                            <i class="fas fa-ship text-gold-400 group-hover:text-black"></i>
+                        </div>
+                        <div class="w-full md:w-5/12 text-center md:text-left order-2 md:order-3">
+                            <h3 class="font-serif text-2xl text-white mb-2">04. Global Logistics</h3>
+                            <p class="text-gray-400 font-light text-sm">Secure clearing, forwarding, and shipping to international partners.</p>
                         </div>
                     </div>
                 </div>
@@ -305,6 +385,31 @@
                     </div>
                     <h3 class="font-serif text-xl text-white mb-4">Logistics</h3>
                     <p class="text-gray-400 text-sm font-light">Secure transportation from the mine site to global destinations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Stats Counter Parallax -->
+    <section class="py-20 parallax-bg bg-gold-900 border-y border-gold-800" style="background-image: url('https://images.unsplash.com/photo-1629780075549-3406322b27a3?q=80&w=2000&auto=format&fit=crop');">
+        <div class="absolute inset-0 bg-black/90"></div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <h3 class="text-4xl md:text-5xl font-serif text-gold-400 mb-2">10+</h3>
+                    <p class="text-gray-300 text-xs tracking-widest uppercase">Mining Sites</p>
+                </div>
+                <div>
+                    <h3 class="text-4xl md:text-5xl font-serif text-gold-400 mb-2">500+</h3>
+                    <p class="text-gray-300 text-xs tracking-widest uppercase">Employees</p>
+                </div>
+                <div>
+                    <h3 class="text-4xl md:text-5xl font-serif text-gold-400 mb-2">99%</h3>
+                    <p class="text-gray-300 text-xs tracking-widest uppercase">Purity Grade</p>
+                </div>
+                <div>
+                    <h3 class="text-4xl md:text-5xl font-serif text-gold-400 mb-2">15</h3>
+                    <p class="text-gray-300 text-xs tracking-widest uppercase">Intl Partners</p>
                 </div>
             </div>
         </div>
@@ -444,6 +549,99 @@
                         <i class="fas fa-globe-africa text-gold-500 text-3xl mb-4"></i>
                         <h4 class="text-white font-serif text-lg mb-2">Global Reach</h4>
                         <p class="text-gray-500 text-xs">Seamless operations from extraction to international delivery.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Compliance & Safety -->
+    <section class="py-24 bg-onyx border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <span class="text-gold-400 uppercase tracking-[0.2em] text-sm">Our Standards</span>
+            <h2 class="font-serif text-4xl text-white mt-4 mb-16">Safety & Compliance</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 border border-white/10 hover:border-gold-500 transition-colors">
+                    <i class="fas fa-shield-alt text-5xl text-gold-500 mb-6"></i>
+                    <h3 class="text-white font-serif text-xl mb-4">Worker Safety</h3>
+                    <p class="text-gray-400 font-light text-sm">Adhering to strict occupational health and safety protocols to ensure a zero-harm environment.</p>
+                </div>
+                <div class="p-8 border border-white/10 hover:border-gold-500 transition-colors">
+                    <i class="fas fa-seedling text-5xl text-gold-500 mb-6"></i>
+                    <h3 class="text-white font-serif text-xl mb-4">Environmental Protection</h3>
+                    <p class="text-gray-400 font-light text-sm">Implementing rigorous land rehabilitation and waste management strategies post-extraction.</p>
+                </div>
+                <div class="p-8 border border-white/10 hover:border-gold-500 transition-colors">
+                    <i class="fas fa-balance-scale text-5xl text-gold-500 mb-6"></i>
+                    <h3 class="text-white font-serif text-xl mb-4">Legal Compliance</h3>
+                    <p class="text-gray-400 font-light text-sm">Fully licensed by the Directorate of Geological Survey and Mines (DGSM) Uganda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Investor Relations CTA -->
+    <section class="py-20 bg-gold-600 relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="absolute -right-20 -top-20 w-96 h-96 border-[20px] border-white/10 rounded-full"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
+            <h2 class="font-serif text-3xl md:text-5xl text-black font-bold mb-6">Partnership Opportunities</h2>
+            <p class="text-black/80 text-lg mb-8 max-w-2xl mx-auto font-medium">
+                We are actively seeking international partners for joint ventures in our newly explored exploration licenses in the Albertine Graben.
+            </p>
+            <a href="#contact" class="inline-block px-10 py-4 bg-black text-white font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300">
+                Download Investor Deck
+            </a>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: FAQ Accordion -->
+    <section class="py-24 bg-charcoal">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-gold-400 uppercase tracking-[0.2em] text-sm">Common Queries</span>
+                <h2 class="font-serif text-3xl text-white mt-4">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="accordion-item bg-white/5 border border-white/5 overflow-hidden">
+                    <button class="w-full px-6 py-5 text-left flex justify-between items-center text-white focus:outline-none" onclick="toggleAccordion(this)">
+                        <span class="font-serif text-lg">Do you handle international shipping?</span>
+                        <i class="fas fa-chevron-down text-gold-500 accordion-icon transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content bg-black/20">
+                        <p class="px-6 pb-6 text-gray-400 font-light text-sm">
+                            Yes, we provide end-to-end logistics solutions including insurance, customs clearance, and secure air/freight shipping to Dubai, Europe, and Asia.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="accordion-item bg-white/5 border border-white/5 overflow-hidden">
+                    <button class="w-full px-6 py-5 text-left flex justify-between items-center text-white focus:outline-none" onclick="toggleAccordion(this)">
+                        <span class="font-serif text-lg">Are your minerals conflict-free?</span>
+                        <i class="fas fa-chevron-down text-gold-500 accordion-icon transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content bg-black/20">
+                        <p class="px-6 pb-6 text-gray-400 font-light text-sm">
+                            Absolutely. We strictly adhere to the OECD Due Diligence Guidance and the ICGLR Regional Certification Mechanism to ensure all our minerals are ethically sourced and conflict-free.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="accordion-item bg-white/5 border border-white/5 overflow-hidden">
+                    <button class="w-full px-6 py-5 text-left flex justify-between items-center text-white focus:outline-none" onclick="toggleAccordion(this)">
+                        <span class="font-serif text-lg">What is the minimum order quantity?</span>
+                        <i class="fas fa-chevron-down text-gold-500 accordion-icon transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content bg-black/20">
+                        <p class="px-6 pb-6 text-gray-400 font-light text-sm">
+                            MOQs vary depending on the mineral type. For gold, we typically deal with quantities starting from 1kg. Please contact our sales team for specific quotes.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -627,6 +825,22 @@
             el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
             observer.observe(el);
         });
+
+        // 6. Accordion Functionality
+        function toggleAccordion(button) {
+            const item = button.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            // Close all others
+            document.querySelectorAll('.accordion-item').forEach(acc => {
+                acc.classList.remove('active');
+            });
+
+            // Toggle clicked
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
 
     </script>
 </body>
