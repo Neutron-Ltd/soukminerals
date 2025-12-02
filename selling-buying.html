@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selling & Buying | Souk Minerals Uganda</title>
+    <meta name="description" content="Transparent mineral trading services. Buy and sell premium minerals from Uganda with Souk Minerals.">
+    <meta name="author" content="Souk Minerals Uganda">
+    <meta name="theme-color" content="#d6a14c">
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <link rel="apple-touch-icon" href="assets/icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: { 100: '#F9F1D8', 200: '#F0DEAA', 300: '#E6CB7D', 400: '#DDB753', 500: '#d6a14c', 600: '#AA8222', 700: '#80621A', 800: '#554111', 900: '#2B2109' },
+                        onyx: '#0a0a0a',
+                        charcoal: '#121212',
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] }
+                }
+            }
+        }
+    </script>
+    <style>body { background-color: #050505; color: #e5e5e5; }</style>
+</head>
+<body class="antialiased selection:bg-gold-500 selection:text-white">
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-6 px-4 md:px-8 border-b border-transparent bg-black/90 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="/" class="group flex items-center gap-2">
+                <img src="assets/souk-logo.png" class="w-[120px] md:w-[200px]" alt="Souk Minerals Uganda">
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="/" class="text-sm uppercase tracking-widest hover:text-gold-400 transition-colors">Home</a>
+                <a href="about.html" class="text-sm uppercase tracking-widest hover:text-gold-400 transition-colors">About Us</a>
+                <div class="relative group/dropdown">
+                    <button class="text-sm uppercase tracking-widest text-gold-400 transition-colors flex items-center gap-1">Services <i class="fas fa-chevron-down text-xs"></i></button>
+                    <div class="absolute top-full left-0 pt-4 opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible transition-all duration-300">
+                        <div class="bg-black/95 backdrop-blur-md border border-white/10 py-4 min-w-[220px]">
+                            <a href="mineral-mining.html" class="block px-6 py-3 text-sm text-white hover:text-gold-400 hover:bg-white/5 transition-colors">Mineral Mining</a>
+                            <a href="selling-buying.html" class="block px-6 py-3 text-sm text-gold-400 bg-white/5">Selling & Buying</a>
+                            <a href="clearing-forwarding.html" class="block px-6 py-3 text-sm text-white hover:text-gold-400 hover:bg-white/5 transition-colors">Clearing & Forwarding</a>
+                            <a href="shipping.html" class="block px-6 py-3 text-sm text-white hover:text-gold-400 hover:bg-white/5 transition-colors">Shipping / Transportation</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="minerals.html" class="text-sm uppercase tracking-widest hover:text-gold-400 transition-colors">Our Minerals</a>
+                <a href="contact.html" class="px-6 py-2 border border-gold-500 text-gold-400 hover:bg-gold-500 hover:text-black transition-all duration-300 uppercase text-xs tracking-widest font-bold">Contact Us</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-gold-400 text-2xl"><i class="fas fa-bars"></i></button>
+        </div>
+        <div id="mobile-menu" class="fixed inset-0 bg-black/95 transform translate-x-full transition-transform duration-300 flex flex-col items-center justify-center gap-6 md:hidden h-screen z-50">
+            <button id="close-menu" class="absolute top-8 right-8 text-gold-400 text-2xl"><i class="fas fa-times"></i></button>
+            <a href="/" class="text-2xl font-serif text-white hover:text-gold-400">Home</a>
+            <a href="about.html" class="text-2xl font-serif text-white hover:text-gold-400">About Us</a>
+            <div class="text-center">
+                <p class="text-gold-400 text-sm uppercase tracking-widest mb-3">Services</p>
+                <a href="mineral-mining.html" class="block text-lg font-serif text-white hover:text-gold-400 py-1">Mineral Mining</a>
+                <a href="selling-buying.html" class="block text-lg font-serif text-gold-400 py-1">Selling & Buying</a>
+                <a href="clearing-forwarding.html" class="block text-lg font-serif text-white hover:text-gold-400 py-1">Clearing & Forwarding</a>
+                <a href="shipping.html" class="block text-lg font-serif text-white hover:text-gold-400 py-1">Shipping / Transportation</a>
+            </div>
+            <a href="minerals.html" class="text-2xl font-serif text-white hover:text-gold-400">Our Minerals</a>
+            <a href="contact.html" class="text-2xl font-serif text-gold-500">Contact Us</a>
+        </div>
+    </nav>
+
+    <header class="pt-40 pb-20 bg-charcoal">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <span class="text-gold-400 uppercase tracking-[0.2em] text-sm">Our Services</span>
+            <h1 class="font-serif text-5xl md:text-6xl text-white mt-4">Selling & Buying</h1>
+        </div>
+    </header>
+
+    <section class="py-24 bg-onyx">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="font-serif text-3xl text-white mb-6">Transparent Trading</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">We facilitate transparent trading of raw and refined minerals for international markets, ensuring fair prices and quality assurance.</p>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-gold-400 mt-1"></i>Competitive market pricing</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-gold-400 mt-1"></i>Quality certification</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-gold-400 mt-1"></i>Secure transactions</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-gold-400 mt-1"></i>International buyer network</li>
+                    </ul>
+                </div>
+                <img src="assets/gold.jpg" alt="Mineral Trading" class="w-full h-[400px] object-cover rounded">
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <h4 class="font-serif text-2xl text-white">Souk Minerals</h4>
+                <p class="text-gray-500 text-sm mt-1">© 2025 Souk Minerals Uganda. All rights reserved.</p>
+            </div>
+            <div class="flex gap-6">
+                <a href="#" class="text-gray-500 hover:text-gold-400 transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                <a href="#" class="text-gray-500 hover:text-gold-400 transition-colors"><i class="fab fa-twitter text-xl"></i></a>
+                <a href="#" class="text-gray-500 hover:text-gold-400 transition-colors"><i class="fab fa-facebook text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        function toggleMenu() { mobileMenu.classList.toggle('translate-x-full'); }
+        menuBtn.addEventListener('click', toggleMenu);
+        closeMenu.addEventListener('click', toggleMenu);
+        menuLinks.forEach(link => link.addEventListener('click', toggleMenu));
+    </script>
+</body>
+</html>
+

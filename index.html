@@ -191,15 +191,27 @@
 
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-6 px-4 md:px-8 border-b border-transparent">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="#" class="group flex items-center gap-2">
-                <img src="assets/souk-logo.png" width="200">
+            <a href="/" class="group flex items-center gap-2">
+                <img src="assets/souk-logo.png" class="w-[120px] md:w-[200px]" alt="Souk Minerals Uganda">
             </a>
             <div class="hidden md:flex items-center gap-8">
-                <a href="#about" class="text-sm uppercase tracking-widest hover:text-gold-400 transition-colors">About</a>
-                <a href="#process" class="text-sm uppercase tracking-widest hover:text-gold-400 transition-colors">Process</a>
-                <a href="#services" class="text-sm uppercase tracking-widest hover:text-gold-400 transition-colors">Services</a>
-                <a href="#minerals" class="text-sm uppercase tracking-widest hover:text-gold-400 transition-colors">Minerals</a>
-                <a href="#contact" class="px-6 py-2 border border-gold-500 text-gold-400 hover:bg-gold-500 hover:text-black transition-all duration-300 uppercase text-xs tracking-widest font-bold">
+                <a href="/" class="text-sm uppercase tracking-widest hover:text-gold-400 transition-colors">Home</a>
+                <a href="about.html" class="text-sm uppercase tracking-widest hover:text-gold-400 transition-colors">About Us</a>
+                <div class="relative group/dropdown">
+                    <button class="text-sm uppercase tracking-widest hover:text-gold-400 transition-colors flex items-center gap-1">
+                        Services <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div class="absolute top-full left-0 pt-4 opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible transition-all duration-300">
+                        <div class="bg-black/95 backdrop-blur-md border border-white/10 py-4 min-w-[220px]">
+                            <a href="mineral-mining.html" class="block px-6 py-3 text-sm text-white hover:text-gold-400 hover:bg-white/5 transition-colors">Mineral Mining</a>
+                            <a href="selling-buying.html" class="block px-6 py-3 text-sm text-white hover:text-gold-400 hover:bg-white/5 transition-colors">Selling & Buying</a>
+                            <a href="clearing-forwarding.html" class="block px-6 py-3 text-sm text-white hover:text-gold-400 hover:bg-white/5 transition-colors">Clearing & Forwarding</a>
+                            <a href="shipping.html" class="block px-6 py-3 text-sm text-white hover:text-gold-400 hover:bg-white/5 transition-colors">Shipping / Transportation</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="minerals.html" class="text-sm uppercase tracking-widest hover:text-gold-400 transition-colors">Our Minerals</a>
+                <a href="contact.html" class="px-6 py-2 border border-gold-500 text-gold-400 hover:bg-gold-500 hover:text-black transition-all duration-300 uppercase text-xs tracking-widest font-bold">
                     Contact Us
                 </a>
             </div>
@@ -207,13 +219,19 @@
                 <i class="fas fa-bars"></i>
             </button>
         </div>
-        <div id="mobile-menu" class="fixed inset-0 bg-black/95 transform translate-x-full transition-transform duration-300 flex flex-col items-center justify-center gap-8 md:hidden h-screen z-50">
+        <div id="mobile-menu" class="fixed inset-0 bg-black/95 transform translate-x-full transition-transform duration-300 flex flex-col items-center justify-center gap-6 md:hidden h-screen z-50">
             <button id="close-menu" class="absolute top-8 right-8 text-gold-400 text-2xl"><i class="fas fa-times"></i></button>
-            <a href="#about" class="text-2xl font-serif text-white hover:text-gold-400">About Us</a>
-            <a href="#process" class="text-2xl font-serif text-white hover:text-gold-400">Our Process</a>
-            <a href="#services" class="text-2xl font-serif text-white hover:text-gold-400">Services</a>
-            <a href="#minerals" class="text-2xl font-serif text-white hover:text-gold-400">Minerals</a>
-            <a href="#contact" class="text-2xl font-serif text-gold-500">Contact</a>
+            <a href="/" class="text-2xl font-serif text-white hover:text-gold-400">Home</a>
+            <a href="about.html" class="text-2xl font-serif text-white hover:text-gold-400">About Us</a>
+            <div class="text-center">
+                <p class="text-gold-400 text-sm uppercase tracking-widest mb-3">Services</p>
+                <a href="mineral-mining.html" class="block text-lg font-serif text-white hover:text-gold-400 py-1">Mineral Mining</a>
+                <a href="selling-buying.html" class="block text-lg font-serif text-white hover:text-gold-400 py-1">Selling & Buying</a>
+                <a href="clearing-forwarding.html" class="block text-lg font-serif text-white hover:text-gold-400 py-1">Clearing & Forwarding</a>
+                <a href="shipping.html" class="block text-lg font-serif text-white hover:text-gold-400 py-1">Shipping / Transportation</a>
+            </div>
+            <a href="minerals.html" class="text-2xl font-serif text-white hover:text-gold-400">Our Minerals</a>
+            <a href="contact.html" class="text-2xl font-serif text-gold-500">Contact Us</a>
         </div>
     </nav>
 
@@ -222,8 +240,7 @@
             <source src="assets/hero-bg-gold.mp4" type="video/mp4">
             <img src="assets/hero-bg.jpg" class="w-full h-full object-cover" alt="Hero Fallback">
         </video>
-        <canvas id="goldDustCanvas" class="absolute inset-0 w-full h-full z-1 opacity-10 pointer-events-none"></canvas>
-        <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/50 z-10 pointer-events-none"></div>
+        <canvas id="goldDustCanvas" class="absolute inset-0 w-full h-full z-1 opacity-5 pointer-events-none"></canvas>
         <div class="relative z-20 text-center px-4 max-w-5xl mx-auto opacity-0 translate-y-10 animate-fade-up">
             <p class="text-gold-400 tracking-[0.3em] uppercase text-sm mb-4">Premium Extraction in Uganda</p>
             <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-white leading-tight drop-shadow-lg">
